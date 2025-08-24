@@ -3,52 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scroll Timeline</title>
-  <link rel="stylesheet" href="style1.css">
+  <title>Skills Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .carousel-container {
+      width: 80%;
+      max-width: 900px;
+      position: relative;
+      overflow: hidden;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .skill-card {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #fafafa;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s;
+      width: 150px;
+      height: 150px;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+    }
+
+    .skill-card img {
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+      transition: opacity 0.3s;
+    }
+
+    /* Transparent overlay */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 2;
+    }
+
+    .overlay p {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    /* Show overlay on hover */
+    .skill-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot.active {
+      background-color: #333;
+    }
+  </style>
 </head>
 <body>
-  <div class="timeline-container">
-    <h1>My Journey</h1>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="year">2023 – Present</div>
-        <div class="details left">
-          <h3>Associate Degree in Full-Stack Development</h3>
-          <p><strong>College in Canada</strong></p>
-          <p>Focused on modern web and software development technologies.</p>
+
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <div class="skill-card">
+          <img src="images/html.webp" alt="HTML">
+          <div class="overlay"><p>HTML</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/css-logo.webp" alt="CSS">
+          <div class="overlay"><p>CSS</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/javascript-logo.webp" alt="JavaScript">
+          <div class="overlay"><p>JavaScript</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/react-logo.webp" alt="React">
+          <div class="overlay"><p>React</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/node-logo.webp" alt="Node.js">
+          <div class="overlay"><p>Node.js</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/mongo.png" alt="MongoDB">
+          <div class="overlay"><p>MongoDB</p></div>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="year">2021 – 2023</div>
-        <div class="details right">
-          <h3>.NET Developer</h3>
-          <p><strong>The One Technologies</strong></p>
-          <p>Worked on full-cycle development of enterprise web applications.</p>
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="skill-card">
+          <img src="images/python.png" alt="Python">
+          <div class="overlay"><p>Python</p></div>
         </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="year">2018 – 2021</div>
-        <div class="details left">
-          <h3>Bachelor of Computer Applications</h3>
-          <p><strong>India</strong></p>
-          <p>Gained foundation in programming, databases, and software engineering.</p>
+        <div class="skill-card">
+          <img src="images/java.png" alt="Java">
+          <div class="overlay"><p>Java</p></div>
         </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="year">2020 – 2021</div>
-        <div class="details right">
-          <h3>Crew Member</h3>
-          <p><strong>Pizza Junction</strong></p>
-          <p>Part-time role handling food service, customer interaction, and sales.</p>
+        <div class="skill-card">
+          <img src="images/csharp.png" alt="C#">
+          <div class="overlay"><p>C#</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/git.png" alt="Git">
+          <div class="overlay"><p>Git</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/github.png" alt="GitHub">
+          <div class="overlay"><p>GitHub</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/docker.png" alt="Docker">
+          <div class="overlay"><p>Docker</p></div>
         </div>
       </div>
     </div>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const dots = document.querySelectorAll('.dot');
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+  </script>
+
 </body>
 </html>

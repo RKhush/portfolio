@@ -53,8 +53,10 @@
        associate degree in Full-Stack Development in Canada.</p>
     <div class="links">
       <a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a>
-      <a href="#experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a>
+      <a href="#timeline"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a>
+      <a href="#projects"><i class="fa-solid fa-puzzle-piece"></i><span>Project</span></a>
       <a href="#contact"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+
       <!-- <a href="images/resume.pdf" target="_blank"><i class="fa-solid fa-download"></i><span>Resume</span></a>
        -->
     </div>
@@ -64,40 +66,78 @@
   </div>
 </section>
 
-    <!-- SECTION 2: Skills -->
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet quos rerum? Perferendis repellat natus saepe quaerat quibusdam neque recusandae optio?
+<section id="skills" class="skills-section">
+  <h2>Skills</h2>
+
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <div class="skill-card">
+          <img src="images/skills/HTML5.png" alt="HTML">
+          <div class="overlay"><p>HTML</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/skills/CSS3.png" alt="CSS">
+          <div class="overlay"><p>CSS</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/skills/JavaScript.png" alt="JavaScript">
+          <div class="overlay"><p>JavaScript</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/skills/Csharp.png" alt="Csharp">
+          <div class="overlay"><p>C#(C Sharp)</p></div>
+        </div>
+      
+         <div class="skill-card">
+          <img src="images/skills/Java.png" alt="Java">
+          <div class="overlay"><p>Java</p></div>
+        </div>
+          <div class="skill-card">
+          <img src="images/skills/NET core.png" alt="DOTNET">
+          <div class="overlay"><p>Dot Net Core</p></div>
+        </div>
+       
       </div>
 
-      <div class="cells">
-        <div class="cell">
-          <img src="images/html-logo.webp" alt="html logo">
-          <span>HTML</span>
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="skill-card">
+          <img src="images/skills/GitHub.png" alt="GitHub">
+          <div class="overlay"><p>GitHub</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/skills/GitLab.png" alt="GitLab">
+          <div class="overlay"><p>GitLab</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/skills/Git.png" alt="git">
+          <div class="overlay"><p>Git</p></div>
+        </div>
+        <div class="skill-card">
+          <img src="images/skills/MySQL.png" alt="MySQL">
+          <div class="overlay"><p>SQL</p></div>
         </div>
         
-        <div class="cell">
-          <img src="images/css-logo.webp" alt="css logo">
-          <span>CSS</span>
+          <div class="skill-card">
+          <img src="images/skills/Azure Devops.png" alt="Azure.js">
+          <div class="overlay"><p>Azure Devops</p></div>
         </div>
-        
-        <div class="cell">
-          <img src="images/javascript-logo.webp" alt="javascript logo">
-          <span>JavaScript</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/node-logo.webp" alt="node logo">
-          <span>Node.js</span>
-        </div>
-        
-        <div class="cell">
-          <img src="images/react-logo.webp" alt="react logo">
-          <span>React.js</span>
+        <div class="skill-card">
+          <img src="images/skills/Python.png" alt="Python">
+          <div class="overlay"><p>Python</p></div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
 
 
 <section id="timeline">
@@ -144,30 +184,87 @@
   </div>
 </section>
 
-  
-    <!-- SECTION 4: Contact -->
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
-
-      <div class="group">
-        <div class="text">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat fugit maiores atque architecto saepe tenetur quasi reiciendis illum sint doloremque alias inventore, asperiores maxime pariatur totam hic assumenda repudiandae, iusto quisquam nisi! Eaque doloremque perspiciatis minus voluptate dicta. A ratione autem dolor iure libero numquam voluptatem nobis laborum et corporis.
+  <!-- Projects Section -->
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-container">
+    
+    <!-- Project Card 1 -->
+    <div class="project-card" onclick="openLightbox('images/project1.png')">
+      <img src="images/project1.png" alt="Project 1 Screenshot">
+      <div class="project-overlay">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio built with HTML, CSS, and JavaScript.</p>
+        <div class="project-links">
+          <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+          <a href="https://github.com/yourgithub/project1" target="_blank">GitHub</a>
         </div>
-
-        <form>
-          <label for="name">Name</label>
-          <input type="text" id="name">
-
-          <label for="email">Email</label>
-          <input type="email" id="email">
-
-          <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
-
-          <button type="submit">Send Message</button>
-        </form>
       </div>
-    </section>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card" onclick="openLightbox('images/project2.png')">
+      <img src="images/project2.png" alt="Project 2 Screenshot">
+      <div class="project-overlay">
+        <h3>E-Commerce App</h3>
+        <p>Online shop with cart, authentication, and payment gateway.</p>
+        <div class="project-links">
+          <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+          <a href="https://github.com/yourgithub/project2" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card" onclick="openLightbox('images/project3.png')">
+      <img src="images/project3.png" alt="Project 3 Screenshot">
+      <div class="project-overlay">
+        <h3>Task Manager</h3>
+        <p>A productivity app to manage tasks and deadlines.</p>
+        <div class="project-links">
+          <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+          <a href="https://github.com/yourgithub/project3" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <!-- SECTION 4: Contact -->
+    <!-- ================= CONTACT SECTION ================= -->
+<section id="contact">
+  <div class="contact-container">
+    
+    <!-- LEFT: INTRO -->
+    <div class="contact-info">
+      <h2>Let’s Connect ☕</h2>
+      <p>Got a project idea, collaboration request, or just want to say hi?  
+      Drop me a message and I’ll get back to you soon!</p>
+
+      <div class="social-icons">
+        <a href="mailto:khushburathva607@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/khushbu-rathva-56498a17a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form">
+      <form  id="contactForm" action="https://formspree.io/f/xwpneqgr" method="POST" >
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit" id="submitBtn" onclick="submitForm(event)">Send Message</button>
+         <p id="statusMessage" style="margin-top:10px;"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
   </main>
   <script src="script.js"></script>
 </body>

@@ -1,0 +1,193 @@
+/* =========================
+   THEME COLORS
+   ========================= */
+:root {
+  --coffee: #6F4E37;        /* Dark coffee brown */
+  --beige: #F5F5DC;         /* Light beige background */
+  --text-color: #3e2c23;    /* Slightly softer dark for body text */
+  --link-color: var(--coffee);
+  --background-color: var(--beige);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 80px;
+  background: var(--coffee);
+}
+
+nav .left a {
+  color: var(--beige);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav .right a {
+  color: var(--beige);
+  margin: 0 10px;
+}
+
+nav .right a:last-child {
+  color: var(--coffee);
+  background-color: var(--beige);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+nav .right a span {
+  margin-left: 5px;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin: 50px 0 100px;
+  gap: 40px;
+}
+
+.hero-section .text h2 {
+  font-size: 45px;
+  color: var(--coffee);
+}
+
+.hero-section .text .links a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid var(--coffee);
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .2s;
+}
+
+.hero-section .text .links a:hover {
+  background: var(--coffee);
+  color: var(--beige);
+}
+
+.hero-section .headshot img {
+  width: 350px;
+  border-radius: 50%;
+  border: 5px solid var(--coffee);
+}
+
+/* =========================
+   SKILLS CAROUSEL
+   ========================= */
+.carousel-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  background: var(--beige);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.skill-card {
+  background: var(--beige);
+  border: 2px solid var(--coffee);
+}
+
+.overlay {
+  background: rgba(111, 78, 55, 0.85); /* Coffee brown overlay */
+}
+
+/* Carousel dots */
+.dot {
+  background-color: #ccc;
+}
+
+.dot.active {
+  background-color: var(--coffee);
+}
+
+/* =========================
+   TIMELINE
+   ========================= */
+.timeline::before {
+  background: var(--coffee);
+}
+
+.year {
+  background: var(--coffee);
+  color: var(--beige);
+}
+
+/* =========================
+   PROJECTS SECTION
+   ========================= */
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+  background: var(--beige);
+}
+
+.project-card {
+  border: 2px solid var(--coffee);
+}
+
+.project-links a {
+  background: var(--coffee);
+  color: var(--beige);
+}
+
+.project-links a:hover {
+  background: #5a3c2d; /* Darker coffee shade */
+}
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contact-section h2 {
+  color: var(--coffee);
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  border: 2px solid var(--coffee);
+}
+
+.contact-section .group form button {
+  background-color: var(--coffee);
+  color: var(--beige);
+}
+
+.contact-section .group form button:hover {
+  filter: brightness(1.1);
+}
