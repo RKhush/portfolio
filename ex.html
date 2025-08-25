@@ -1,197 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills Carousel</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .carousel-container {
-      width: 80%;
-      max-width: 900px;
-      position: relative;
-      overflow: hidden;
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 20px;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .skill-card {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      background: #fafafa;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s;
-      width: 150px;
-      height: 150px;
-    }
-
-    .skill-card:hover {
-      transform: scale(1.05);
-    }
-
-    .skill-card img {
-      width: 60px;
-      height: 60px;
-      z-index: 1;
-      transition: opacity 0.3s;
-    }
-
-    /* Transparent overlay */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: 2;
-    }
-
-    .overlay p {
-      color: white;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    /* Show overlay on hover */
-    .skill-card:hover .overlay {
-      opacity: 1;
-    }
-
-    .dots {
-      display: flex;
-      justify-content: center;
-      margin-top: 15px;
-    }
-
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .dot.active {
-      background-color: #333;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <!-- Slide 1 -->
-      <div class="carousel-slide">
-        <div class="skill-card">
-          <img src="images/html.webp" alt="HTML">
-          <div class="overlay"><p>HTML</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/css-logo.webp" alt="CSS">
-          <div class="overlay"><p>CSS</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/javascript-logo.webp" alt="JavaScript">
-          <div class="overlay"><p>JavaScript</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/react-logo.webp" alt="React">
-          <div class="overlay"><p>React</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/node-logo.webp" alt="Node.js">
-          <div class="overlay"><p>Node.js</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/mongo.png" alt="MongoDB">
-          <div class="overlay"><p>MongoDB</p></div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-slide">
-        <div class="skill-card">
-          <img src="images/python.png" alt="Python">
-          <div class="overlay"><p>Python</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/java.png" alt="Java">
-          <div class="overlay"><p>Java</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/csharp.png" alt="C#">
-          <div class="overlay"><p>C#</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/git.png" alt="Git">
-          <div class="overlay"><p>Git</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/github.png" alt="GitHub">
-          <div class="overlay"><p>GitHub</p></div>
-        </div>
-        <div class="skill-card">
-          <img src="images/docker.png" alt="Docker">
-          <div class="overlay"><p>Docker</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dots -->
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-    </div>
+<!-- Skills Section -->
+<section class="skills">
+  <div class="skills-content">
+    <h2 id="skills-typed"></h2>
+    <p>Here are the technologies and tools I work with to build interactive, user-friendly web applications.</p>
   </div>
+</section>
 
-  <script>
-    const track = document.querySelector('.carousel-track');
-    const dots = document.querySelectorAll('.dot');
+<!-- Styles -->
+<style>
+  .skills {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f4f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        track.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach(d => d.classList.remove('active'));
-        dot.classList.add('active');
-      });
-    });
-  </script>
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    min-height: 2.5rem; /* Prevent jump while typing */
+  }
 
-</body>
-</html>
+  .skills p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .typed-cursor {
+    display: inline-block;
+    background-color: #000;
+    width: 2px;
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+    vertical-align: bottom;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+  }
+</style>
+
+<!-- Typing Effect Script -->
+<script>
+  const skillsTexts = [
+    "What I Bring to the Table 🚀",
+    "My Toolbox of Awesomeness 🛠️",
+    "Crafting Code & Creativity 💻✨",
+    "Technologies I Tame",
+    "Full-Stack Powers Activated ⚡"
+  ];
+
+  const skillsTyped = document.getElementById("skills-typed");
+  let skillIndex = 0;
+  let charIndex = 0;
+
+  function typeSkill() {
+    if(charIndex < skillsTexts[skillIndex].length) {
+      skillsTyped.innerHTML += skillsTexts[skillIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(typeSkill, 100);
+    } else {
+      // Add blinking cursor at the end
+      const cursor = document.createElement("span");
+      cursor.classList.add("typed-cursor");
+      skillsTyped.appendChild(cursor);
+
+      // Wait before erasing
+      setTimeout(eraseSkill, 1500);
+    }
+  }
+
+  function eraseSkill() {
+    const cursor = document.querySelector(".typed-cursor");
+    if(cursor) cursor.remove();
+    if(charIndex > 0) {
+      skillsTyped.innerHTML = skillsTexts[skillIndex].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(eraseSkill, 50);
+    } else {
+      skillIndex = (skillIndex + 1) % skillsTexts.length;
+      setTimeout(typeSkill, 300);
+    }
+  }
+
+  window.onload = typeSkill;
+</script>

@@ -12,6 +12,27 @@ details.forEach(detail => {
   observer.observe(detail);
 });
 
+// animated text
+  const text = "Skills That Make Magic Happen ✨";
+  const typedText = document.getElementById("typed-text");
+  let index = 0;
+
+  function type() {
+    if(index < text.length) {
+      typedText.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(type, 100); // typing speed (ms)
+    } else {
+      // Add blinking cursor at the end
+      const cursor = document.createElement("span");
+      cursor.classList.add("typed-cursor");
+      typedText.appendChild(cursor);
+    }
+  }
+
+  window.onload = type;
+
+
 // Skills carousel
 const track = document.querySelector('.carousel-track');
 const dots = document.querySelectorAll('.dot');
@@ -24,19 +45,7 @@ dots.forEach((dot, index) => {
   });
 });
 
-//const form = document.querySelector('form');
-//const statusMessage = document.getElementById('form-status');
 
-// form.addEventListener('submit', function(event) {
-//   event.preventDefault();
-//   statusMessage.textContent = 'Submitting...';
-//   // Handle form submission here
-//   // On success:
-//   statusMessage.textContent = 'Thank you for your submission!';
-//   form.reset();
-//   // On error:
-//   statusMessage.textContent = 'There was an error. Please try again.';
-// });
 function submitForm(event) {
   event.preventDefault(); // Stop page reload
 
