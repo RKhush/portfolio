@@ -79,6 +79,8 @@ function submitForm(event) {
     statusMessage.textContent = 'There was an error. Please try again.';
     console.error(error);
   });
+
+  
 }
 
 

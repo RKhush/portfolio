@@ -107,6 +107,7 @@ nav .right a span {
 /* =========================
    SKILLS CAROUSEL
    ========================= */
+   
 .carousel-container {
   width: 80%;
   max-width: 900px;
@@ -117,6 +118,14 @@ nav .right a span {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+.slide-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #4a3525; /* same brown tone */
+  margin-bottom: 30px;
+  letter-spacing: 0.6px;
 }
 
 .skill-card {
