@@ -82,5 +82,54 @@ function submitForm(event) {
 
   
 }
+const blogCards = document.querySelectorAll(".blog-card");
 
+blogCards.forEach(card => {
+  card.addEventListener("click", () => {
+    const isActive = card.classList.contains("active");
+
+    blogCards.forEach(c => c.classList.remove("active"));
+
+    if (!isActive) {
+      card.classList.add("active");
+    }
+  });
+});
+function submitForm(event) {
+  event.preventDefault();
+
+  const form = document.getElementById("contactForm");
+  const statusMessage = document.getElementById("statusMessage");
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      Accept: "application/json"
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+
+        statusMessage.innerText = "Message Sent Successfully!";
+        statusMessage.style.color = "green";
+
+        // 🎉 CONFETTI CELEBRATION
+        confetti({
+          particleCount: 150,
+          spread: 90,
+          origin: { y: 0.6 }
+        });
+
+      } else {
+        statusMessage.innerText = "Oops! Something went wrong.";
+        statusMessage.style.color = "red";
+      }
+    })
+    .catch(() => {
+      statusMessage.innerText = "Error sending message.";
+      statusMessage.style.color = "red";
+    });
+}
 
